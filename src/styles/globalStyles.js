@@ -9,7 +9,7 @@ export const styles = css`
   }
 
   main {
-    background: ${vars.colors.primary};
+    /* background: ${vars.colors.primary}; */
     height: 100vh;
   }
 `
