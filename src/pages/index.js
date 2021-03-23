@@ -34,7 +34,7 @@ export const query = graphql`
           id
           name
           image {
-            gatsbyImageData(layout: FIXED, height: 600)
+            gatsbyImageData(layout: CONSTRAINED, height: 800, width: 550)
           }
         }
       }

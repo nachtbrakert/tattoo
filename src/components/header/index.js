@@ -15,8 +15,10 @@ const Header = ({ siteTitle }) => (
       <Link to="/contact">Shops</Link>
       <Link to="/contact">Journal</Link>
     </div>
-    <div css={logo}>
-      <span>{siteTitle}</span>
+    <div>
+      <Link to="/" css={logo}>
+        {siteTitle}
+      </Link>
     </div>
     <div css={[navigation, secondaryNavigation]}>
       <Link to="/contact">About</Link>

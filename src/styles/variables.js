@@ -7,6 +7,7 @@ export const vars = {
   colors: {
     primary: "peachpuff",
     black: "#000",
+    white: "#FFF",
   },
   sizes: {
     small: "8px",

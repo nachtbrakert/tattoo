@@ -54,6 +54,7 @@ export const secondaryNavigation = css`
 export const logo = css`
   color: black;
   text-transform: uppercase;
+  text-decoration: none;
   font-weight: ${vars.fontWeight.bold};
   font-size: ${vars.fontSize.xl};
 `
