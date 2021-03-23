@@ -19,10 +19,8 @@ export const headerStyles = css`
 export const navigation = css`
   flex-grow: 1;
   display: flex;
-  padding-left: ${vars.sizes.large};
 
   a {
-    margin-right: ${vars.sizes.large};
     color: ${vars.colors.black};
     text-decoration: none;
     text-transform: uppercase;
@@ -35,11 +33,21 @@ export const navigation = css`
 `
 
 export const primaryNavigation = css`
+  padding-left: ${vars.sizes.large};
   justify-content: flex-start;
+
+  a {
+    margin-right: ${vars.sizes.large};
+  }
 `
 
 export const secondaryNavigation = css`
+  padding-right: ${vars.sizes.large};
   justify-content: flex-end;
+
+  a {
+    margin-left: ${vars.sizes.large};
+  }
 `
 
 export const logo = css`
