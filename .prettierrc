@@ -1,0 +1,7 @@
+{
+  "arrowParens": "avoid",
+  "semi": false,
+  "rules": {
+    "prettier/prettier": [true, { "singleQuote": true, "tabWidth": 4 }]
+  }
+}
