@@ -8,6 +8,7 @@ export const headerStyles = css`
   margin-top: ${vars.sizes.large};
   position: fixed;
   width: 100%;
+  z-index: 10;
 
   /* @media (max-width: 767px) {
     .barsMenu {

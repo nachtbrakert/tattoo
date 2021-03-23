@@ -1,10 +1,9 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import Card from "@components/card/index"
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { graphql } from "gatsby"
+import Grid from "@components/grid"
+import Card from "@components/card"
+import Layout from "@components/layout"
+import SEO from "@components/seo"
 
 const IndexPage = props => {
   const {
@@ -13,24 +12,14 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Home" />
-      {people &&
-        people.edges.map((person, index) => (
-          <Card key={`people-${index}`} title={person.node.name} />
+      <Grid>
+        {people.edges.map((person, index) => (
+          <Card key={`people-${index}`} {...person.node} />
         ))}
-      {/* <p>Welcome to your new Gatsby site.</p>
-      <p>Now go build something great.</p>
-      <StaticImage
-        src="../images/gatsby-astronaut.png"
-        width={300}
-        quality={95}
-        formats={["AUTO", "WEBP", "AVIF"]}
-        alt="A Gatsby astronaut"
-        style={{ marginBottom: `1.45rem` }}
-      />
-      <p>
-        <Link to="/page-2/">Go to page 2</Link> <br />
-        <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-      </p> */}
+        {people.edges.map((person, index) => (
+          <Card key={`people-${index}`} {...person.node} />
+        ))}
+      </Grid>
     </Layout>
   )
 }
@@ -45,9 +34,7 @@ export const query = graphql`
           id
           name
           image {
-            fluid(quality: 92, maxWidth: 2560) {
-              ...GatsbyContentfulFluid_withWebp
-            }
+            gatsbyImageData(layout: FIXED, height: 600)
           }
         }
       }
