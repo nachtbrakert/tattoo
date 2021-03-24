@@ -17,4 +17,8 @@ export const gridStyles = css`
   @media (min-width: ${vars.breakpoints.large}) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
+
+  @media (min-width: ${vars.breakpoints.widescreen}) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
 `

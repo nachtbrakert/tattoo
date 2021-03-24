@@ -9,7 +9,6 @@ export const styles = css`
   }
 
   main {
-    /* background: ${vars.colors.primary}; */
-    height: 100vh;
+    min-height: 100vh;
   }
 `

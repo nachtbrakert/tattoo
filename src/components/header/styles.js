@@ -4,7 +4,7 @@ import { vars } from "@styles/variables"
 export const headerStyles = css`
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin-top: ${vars.sizes.small};
   position: fixed;
   width: 100%;
@@ -15,13 +15,9 @@ export const headerStyles = css`
   }
 `
 
-export const desktopNavigation = css`
-  flex-grow: 1;
+export const navigation = css`
+  flex-basis: 33.33%;
   display: flex;
-
-  @media (max-width: ${vars.breakpoints.medium}) {
-    display: none;
-  }
 
   a {
     color: ${vars.colors.black};
@@ -36,8 +32,12 @@ export const desktopNavigation = css`
 `
 
 export const primaryNavigation = css`
-  padding-left: ${vars.sizes.large};
+  padding-left: ${vars.sizes.small};
   justify-content: flex-start;
+
+  @media (min-width: ${vars.breakpoints.medium}) {
+    padding-left: ${vars.sizes.large};
+  }
 
   a {
     margin-right: ${vars.sizes.large};
@@ -45,8 +45,12 @@ export const primaryNavigation = css`
 `
 
 export const secondaryNavigation = css`
-  padding-right: ${vars.sizes.large};
+  padding-right: ${vars.sizes.small};
   justify-content: flex-end;
+
+  @media (min-width: ${vars.breakpoints.medium}) {
+    padding-right: ${vars.sizes.large};
+  }
 
   a {
     margin-left: ${vars.sizes.large};
@@ -54,9 +58,18 @@ export const secondaryNavigation = css`
 `
 
 export const logo = css`
-  color: black;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: ${vars.fontWeight.bold};
-  font-size: ${vars.fontSize.xl};
+  flex-basis: 33.33%;
+  text-align: center;
+
+  a {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: ${vars.fontWeight.bold};
+    font-size: ${vars.fontSize.lg};
+
+    @media (min-width: ${vars.breakpoints.medium}) {
+      font-size: ${vars.fontSize.xxxl};
+    }
+  }
 `

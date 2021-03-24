@@ -42,5 +42,6 @@ export const vars = {
     small: "767px",
     medium: "992px",
     large: "1200px",
+    widescreen: "2100px",
   },
 }

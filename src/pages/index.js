@@ -16,6 +16,9 @@ const IndexPage = props => {
         {people.edges.map((person, index) => (
           <Card key={`people-${index}`} {...person.node} />
         ))}
+        {people.edges.map((person, index) => (
+          <Card key={`people-${index}`} {...person.node} />
+        ))}
       </Grid>
     </Layout>
   )
