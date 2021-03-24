@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import {
   headerStyles,
-  navigation,
+  desktopNavigation,
   primaryNavigation,
   secondaryNavigation,
   logo,
@@ -10,7 +10,7 @@ import {
 
 const Header = ({ siteTitle }) => (
   <header css={headerStyles}>
-    <div css={[navigation, primaryNavigation]}>
+    <div css={[desktopNavigation, primaryNavigation]}>
       <Link to="/contact">People</Link>
       <Link to="/contact">Shops</Link>
       <Link to="/contact">Journal</Link>
@@ -20,7 +20,7 @@ const Header = ({ siteTitle }) => (
         {siteTitle}
       </Link>
     </div>
-    <div css={[navigation, secondaryNavigation]}>
+    <div css={[desktopNavigation, secondaryNavigation]}>
       <Link to="/contact">About</Link>
       <Link to="/contact">Instagram</Link>
       <Link to="/contact">Journal</Link>

@@ -6,8 +6,12 @@ export const footerStyles = css`
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: ${vars.sizes.large};
+  bottom: ${vars.sizes.small};
   width: 100%;
+
+  @media (min-width: ${vars.breakpoints.medium}) {
+    bottom: ${vars.sizes.large};
+  }
 
   a {
     color: ${vars.colors.black};
@@ -17,23 +21,29 @@ export const footerStyles = css`
 
     &:not(:last-child) {
       &::after {
-        padding: 0 ${vars.sizes.medium};
+        padding: 0 ${vars.sizes.small};
         content: "|";
+
+        @media (min-width: ${vars.breakpoints.medium}) {
+          padding: 0 ${vars.sizes.medium};
+        }
       }
     }
   }
-
-  /* @media (max-width: 767px) {
-    .barsMenu {
-      display: inline-block;
-    }
-  } */
 `
 
 export const copyrightStyles = css`
+  left: ${vars.sizes.small};
+  bottom: ${vars.sizes.small};
+  font-size: ${vars.fontSize.xs};
   position: fixed;
-  left: ${vars.sizes.large};
-  bottom: ${vars.sizes.large};
+  width: 100%;
   transform-origin: left top;
-  transform: rotate(270deg) translateX(-3%);
+  transform: rotate(270deg) translateX(0%);
+
+  @media (min-width: ${vars.breakpoints.medium}) {
+    left: ${vars.sizes.large};
+    bottom: ${vars.sizes.large};
+    transform: rotate(270deg) translateX(0%);
+  }
 `

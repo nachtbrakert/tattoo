@@ -5,21 +5,23 @@ export const headerStyles = css`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin-top: ${vars.sizes.large};
+  margin-top: ${vars.sizes.small};
   position: fixed;
   width: 100%;
   z-index: 10;
 
-  /* @media (max-width: 767px) {
-    .barsMenu {
-      display: inline-block;
-    }
-  } */
+  @media (min-width: ${vars.breakpoints.medium}) {
+    margin-top: ${vars.sizes.large};
+  }
 `
 
-export const navigation = css`
+export const desktopNavigation = css`
   flex-grow: 1;
   display: flex;
+
+  @media (max-width: ${vars.breakpoints.medium}) {
+    display: none;
+  }
 
   a {
     color: ${vars.colors.black};
