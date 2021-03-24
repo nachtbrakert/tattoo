@@ -1,5 +1,5 @@
+import { Global, css } from "@emotion/react"
 import emotionReset from "emotion-reset"
-import { css } from "@emotion/react"
 import { vars } from "./variables"
 
 export const styles = css`
@@ -12,3 +12,15 @@ export const styles = css`
     min-height: 100vh;
   }
 `
+
+const GlobalStyle = () => {
+  return (
+    <Global
+      styles={css`
+        ${styles}
+      `}
+    />
+  )
+}
+
+export default GlobalStyle

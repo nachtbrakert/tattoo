@@ -5,10 +5,11 @@ import { cardStyles, cardInfo } from "./styles"
 
 const Card = props => {
   const image = getImage(props.image.gatsbyImageData)
+  const slug = `/people/${props.name.toLowerCase()}`
 
   return (
     <div css={cardStyles}>
-      <Link to="/people">
+      <Link to={slug}>
         <GatsbyImage image={image} alt={props.name} objectFit={"cover"} />
         <div css={cardInfo}>
           <h5>{props.name}</h5>
