@@ -8,13 +8,13 @@ export const cardStyles = css`
 
   picture {
     transition: opacity 0.3s ease-in;
-    /* opacity: 0.8; */
+    opacity: 0.9;
   }
 
   &:hover {
-    /* picture {
+    picture {
       opacity: 1;
-    } */
+    }
 
     div {
       opacity: 1;

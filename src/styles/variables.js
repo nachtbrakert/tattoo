@@ -20,11 +20,11 @@ export const vars = {
     base: "1rem",
     lg: "1.125rem",
     xl: "2.25rem",
-    "2xl": "1.5rem",
-    "3xl": "1.875rem",
-    "4xl": "2.25rem",
-    "5xl": "3rem",
-    "6xl": "4rem",
+    xxl: "1.5rem",
+    xxxl: "1.875rem",
+    xxxxl: "2.25rem",
+    xxxxxl: "3rem",
+    xxxxxxl: "4rem",
   },
   fontWeight: {
     hairline: "100",
@@ -36,5 +36,11 @@ export const vars = {
     bold: "700",
     extrabold: "800",
     black: "900",
+  },
+  breakpoints: {
+    tiny: "340px",
+    small: "767px",
+    medium: "992px",
+    large: "1200px",
   },
 }
