@@ -66,6 +66,7 @@ module.exports = {
           "@components": "src/components",
           "@styles": "src/styles",
           "@images": "src/images",
+          "@svg": "src/images/svgs",
         },
         extensions: ["js"],
       },
