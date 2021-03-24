@@ -38,7 +38,7 @@ export const vars = {
     black: "900",
   },
   breakpoints: {
-    tiny: "340px",
+    tiny: "540px",
     small: "767px",
     medium: "992px",
     large: "1200px",

@@ -45,6 +45,14 @@ module.exports = {
       options: contentfulConfig,
     },
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /\.inline\.svg$/,
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -57,6 +65,7 @@ module.exports = {
         alias: {
           "@components": "src/components",
           "@styles": "src/styles",
+          "@images": "src/images",
         },
         extensions: ["js"],
       },
@@ -70,7 +79,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/gatsby-icon.png`,
       },
     },
     `gatsby-plugin-gatsby-cloud`,
